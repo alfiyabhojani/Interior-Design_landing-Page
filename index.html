@@ -16,14 +16,19 @@
       <!-- heading -->
       <div class="heading">
         <div class="logo">
-          <img src="./image/white-logo.png" alt="" srcset="" />
+          <img src="./image/white-logo.png" alt="" srcset="" class="img-logo" />
+          <div class="toggle" id="toggle">
+            <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+          </div>
         </div>
-        <div class="nav-list">
-          <h5 class="nav-item">About us</h5>
-          <h5 class="nav-item">Benefits</h5>
-          <h5 class="nav-item">Projects</h5>
-          <h5 class="nav-item">Stages</h5>
-          <h5 class="nav-item">Services</h5>
+        <div class="header-section" id="head__section">
+          <section class="nav__section">
+            <li><a href="#"> About us</a></li>
+            <li><a href="#"> Benefits</a></li>
+            <li><a href="#"> Projects</a></li>
+            <li><a href="#"> Stages</a></li>
+            <li><a href="#"> Services</a></li>
+          </section>
         </div>
         <div class="head-last">
           <div class="icon">
@@ -73,4 +78,15 @@
       </div>
     </div>
   </body>
+
+  <script>
+    const toggle = document.getElementById("toggle");
+    toggle.addEventListener("click", () => {
+      const setDisplayValue =
+        document.getElementById("head__section").style.display === "block"
+          ? "none"
+          : "block";
+      document.getElementById("head__section").style.display = setDisplayValue;
+    });
+  </script>
 </html>

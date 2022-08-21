@@ -1,189 +1,3 @@
-/* * {
-  margin: 0;
-  padding: 0;
-}
-body {
-  background-image: url(./image/backgr.webp);
-}
-.container {
-  padding: 20px;
-}
-.nav-list {
-  display: flex;
-  color: white;
-  position: relative;
-}
-.nav-item-1 {
-  justify-content: space-between;
-  position: absolute;
-  top: -45px;
-  left: 500px;
-  font-size: 30px;
-}
-
-.nav-item-2 {
-  justify-content: space-between;
-  position: absolute;
-  top: -45px;
-  left: 700px;
-  font-size: 30px;
-}
-.nav-item-3 {
-  justify-content: space-between;
-  position: absolute;
-  top: -45px;
-  left: 893px;
-  font-size: 30px;
-}
-.nav-item-4 {
-  justify-content: space-between;
-  position: absolute;
-  top: -45px;
-  right: 752px;
-  font-size: 30px;
-}
-.nav-item-5 {
-  justify-content: space-between;
-  position: absolute;
-  top: -44px;
-  right: 562px;
-  font-size: 30px;
-}
-.call {
-  color: white;
-  position: absolute;
-  top: 13px;
-  right: 85px;
-  font-size: 25px;
-}
-.num {
-  color: white;
-  position: absolute;
-  top: 40px;
-  right: 38px;
-  font-size: 16px;
-}
-.phone {
-  color: white;
-  height: 32px;
-  width: 32px;
-  background-color: white;
-  position: absolute;
-  top: 21px;
-  right: 176px;
-}
-hr {
-  width: 1433px;
-  float: right;
-}
-.main {
-  position: relative;
-}
-.puzzle {
-  position: absolute;
-  top: 136px;
-  right: 90px;
-  color: white;
-  /* border: 10px dotted black; */
-/* padding: 15px;
-  background: rgb(196, 196, 196);
-  background-clip: padding-box;
-}
-.solid {
-  width: 82px;
-  height: 38px;
-  border: 5px;
-  border-radius: 15px;
-  background-color: white;
-}
-.piece {
-  transform: rotate(272deg);
-}
-.puzzle p {
-  padding-top: 14px;
-  font-size: 25px;
-}
-.vl {
-  border-left: 3px solid white;
-  height: 100px;
-  position: absolute;
-  top: 273px;
-  right: 161px;
-}
-.cirle {
-  height: 25px;
-  width: 25px;
-  background-color: white;
-  border-radius: 50%;
-  display: inline-block;
-  position: absolute;
-  top: 363px;
-  right: 151px;
-}
-.bulb {
-  position: absolute;
-  top: 500px;
-  right: 550px;
-  color: white;
-  /* border: 10px dotted black; 
-  padding: 20px;
-  background: rgb(196, 196, 196);
-  background-clip: padding-box;
-}
-.light {
-  width: 82px;
-  height: 38px;
-  border: 5px;
-  border-radius: 15px;
-  background-color: white;
-}
-.bulb p {
-  font-size: 24px;
-  padding-top: 9px;
-}
-.hrl {
-  border-left: 3px solid white;
-  height: 100px;
-  position: absolute;
-  right: 498px;
-  transform: rotate(269deg);
-  top: 533px;
-}
-.circle {
-  height: 25px;
-  width: 25px;
-  background-color: white;
-  border-radius: 50%;
-  display: inline-block;
-  position: absolute;
-  top: 570px;
-  right: 426px;
-}
-.learn {
-  position: absolute;
-  top: 500px;
-  left: 250px;
-  width: 244px;
-  height: 59px;
-  font-size: 30px;
-  font-weight: bold;
-  border-radius: 25px;
-  border: 4px solid white;
-  color: white;
-  text-align: center;
-  padding-top: 10px;
-  height: 50px;
-}
-.main h1 {
-  color: white;
-  position: absolute;
-  top: 200px;
-  left: 250px;
-  font-size: 80px;
-  font-weight: 900; 
-} 
-*/
-
 * {
   margin: 0;
   padding: 0;
@@ -195,13 +9,14 @@ body {
 }
 .logo {
   margin: 30px 40px;
+  display: flex;
 }
 .heading {
   display: flex;
   justify-content: space-between;
   position: relative;
 }
-.nav-list {
+.nav__section {
   display: flex;
 }
 hr {
@@ -215,13 +30,24 @@ hr {
 .fa-phone {
   color: white;
 }
-.nav-item {
+.nav__section li {
   margin: 30px 25px;
   font-size: 25px;
   color: white;
+  list-style: none;
+}
+.nav__section li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 15px;
+  transition: 0.5s ease-in;
 }
 .head-last {
   display: flex;
+}
+.nav__section li a:hover {
+  color: #f3a93d;
 }
 .icon {
   margin: 30px 10px;
@@ -232,6 +58,57 @@ hr {
   margin: 25px 0;
   color: white;
   font-size: 25px;
+}
+.toggle {
+  display: none;
+  font-size: 25px;
+  margin: 5px 20px;
+  color: white;
+}
+@media only screen and (max-width: 480px) {
+  body {
+    background-size: cover;
+  }
+  .logo {
+    margin: 10px 20px;
+  }
+  .logo img {
+    width: 40px;
+    height: 30px;
+  }
+  .header-section {
+    display: block;
+  }
+  .nav__section {
+    display: block;
+  }
+  .nav__section li {
+    display: block;
+    font-size: 16px;
+  }
+  .nav__section li a {
+    padding: 0;
+  }
+  hr {
+    display: none;
+  }
+  .toggle {
+    display: block;
+  }
+  .toggle:hover .header-section {
+    display: block;
+  }
+  .icon {
+    margin: 15px auto;
+    font-size: 15px;
+  }
+  .num h5 {
+    font-size: 12px;
+  }
+  .num {
+    /* font-size: 18px; */
+    margin: 10px;
+  }
 }
 .left {
   display: flex;
@@ -267,6 +144,56 @@ hr {
 .puzzle p {
   color: white;
 }
+.vl {
+  border-left: 2px solid white;
+  height: 100px;
+  position: absolute;
+  right: 300px;
+  top: 370px;
+}
+.cirle {
+  background-color: #fff;
+  border-radius: 50px;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 460px;
+  right: 288px;
+}
+@media only screen and (max-width: 480px) {
+  .left {
+    display: block;
+    margin-top: 0px;
+  }
+
+  .left h1 {
+    margin-top: auto;
+    font-size: 30px;
+    text-align: center;
+    margin-left: 0;
+  }
+  .puzzle {
+    margin-right: 0;
+    font-size: 20px;
+    height: auto;
+    width: 50%;
+    margin-left: 50px;
+    margin-top: 20px;
+  }
+  .vl {
+    height: 50px;
+    right: 180px;
+    top: 327px;
+  }
+  .cirle {
+    right: 171px;
+    top: 370px;
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* right */
 .right {
   display: flex;
   justify-content: space-between;
@@ -274,7 +201,6 @@ hr {
 }
 .learn {
   width: 244px;
-  height: 59px;
   font-size: 30px;
   font-weight: bold;
   border-radius: 25px;
@@ -296,22 +222,7 @@ hr {
   background-color: white;
   margin: 15px 0;
 }
-.vl {
-  border-left: 2px solid white;
-  height: 100px;
-  position: absolute;
-  right: 300px;
-  top: 370px;
-}
-.cirle {
-  background-color: #fff;
-  border-radius: 50px;
-  width: 25px;
-  height: 25px;
-  position: absolute;
-  top: 460px;
-  right: 288px;
-}
+
 .hrl {
   border-left: 2px solid white;
   height: 100px;
@@ -338,4 +249,33 @@ hr {
   height: 200px;
   position: relative;
   padding: 10px;
+}
+@media only screen and (max-width: 480px) {
+  .right {
+    display: block;
+  }
+  .learn {
+    width: 150px;
+    height: 25px;
+    font-size: 20px;
+    margin-top: 90px;
+  }
+  .bulb p {
+    font-size: 20px;
+  }
+  .bulb {
+    width: 70%;
+    height: auto;
+  }
+  .hrl {
+    bottom: -20px;
+    right: 83px;
+    height: 50px;
+  }
+  .circle {
+    bottom: -5px;
+    right: 40px;
+    width: 20px;
+    height: 20px;
+  }
 }
